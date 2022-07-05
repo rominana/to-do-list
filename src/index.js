@@ -22,22 +22,22 @@ clearButton.setAttribute('id', 'clearButton');
 // set an array of some simple to do tasks (array of objects)
 const listItems = [
   {
-    description: 'task 1',
+    description: 'Wash the dishes',
     isCompleted: false,
     index: 0,
   },
   {
-    description: 'task 2',
+    description: 'Finish To Do List project',
     isCompleted: false,
     index: 3,
   },
   {
-    description: 'task 3',
+    description: 'Grocery shopping',
     isCompleted: true,
     index: 2,
   },
   {
-    description: 'task 4',
+    description: 'Do the laundry',
     isCompleted: true,
     index: 1,
   },
