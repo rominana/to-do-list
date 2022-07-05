@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+  margin: 0 auto;
+}
+
+body * {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* LIST ELEMENTS */
+
+#to-do-div div {
+  display: flex;
+  flex-direction: row;
+  border: 1px rgb(216, 216, 216) solid;
+  border-bottom: 0;
+  padding: 5px;
+  padding-left: 10px;
+  width: auto;
+}
+
+#to-do-div div:last-of-type input[type=text]::placeholder {
+  font-style: italic;
+}
+
+#to-do-div div button {
+  padding: 15px;
+  border: 0;
+  margin-left: auto;
+  background-color: rgba(63, 99, 129, 0);
+  background-image: url(./images/refresh.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#to-do-list li button {
+  padding: 15px;
+  border: 0;
+  margin-left: auto;
+  background-color: rgba(63, 99, 129, 0);
+  background-image: url(./images/dots.png);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#to-do-div div:last-of-type button {
+  background-image: url(./images/enter.png);
+}
+
+#to-do-div div input[type=text] {
+  border: 0;
+  outline: none;
+  width: 91%;
+}
+
+#clearButton {
+  border: 1px rgb(216, 216, 216) solid;
+  border-top: 0;
+  padding: 15px;
+  color: rgb(138, 138, 138);
+}
+
+#clearButton:hover {
+  background-color: rgb(138, 138, 138);
+  color: rgb(219, 219, 219);
+}
+
+#to-do-list {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 25px 25px;
+}
+
+#to-do-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px rgb(216, 216, 216) solid;
+  border-top: 0;
+}
+
+#to-do-list li:first-of-type {
+  border-top: 1px rgb(216, 216, 216) solid;
+}
+
+#to-do-list li input[type=checkbox] {
+  margin: 10px;
+}
+
+#to-do-list li input[type=text] {
+  width: 78.5%;
+  border: 0;
+  padding: 10px;
+  outline: none;
+}
