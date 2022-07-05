@@ -12,7 +12,7 @@ const clearButton = document.createElement('button');
 listTitle.setAttribute('type', 'text');
 addTask.setAttribute('type', 'text');
 listTitle.value = 'Today\'s To Do List';
-addTask.setAttribute('placeholder', 'Add to your list...');
+addTask.setAttribute('placeholder', 'Add to your list');
 tasksList.append(listTitleDiv, addTaskDiv);
 listTitleDiv.append(listTitle, listRefresh);
 addTaskDiv.append(addTask, enterTask);
