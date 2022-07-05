@@ -7,7 +7,7 @@ const listRefresh = document.createElement('button');
 const addTaskDiv = document.createElement('div');
 const addTask = document.createElement('INPUT');
 const enterTask = document.createElement('button');
-const clearCompleted = document.createElement('button');
+const clearButton = document.createElement('button');
 
 listTitle.setAttribute('type', 'text');
 addTask.setAttribute('type', 'text');
@@ -16,8 +16,8 @@ addTask.setAttribute('placeholder', 'Add to your list...');
 tasksList.append(listTitleDiv, addTaskDiv);
 listTitleDiv.append(listTitle, listRefresh);
 addTaskDiv.append(addTask, enterTask);
-clearCompleted.innerHTML = 'Clear all completed task';
-clearCompleted.setAttribute('id', 'clearCompleted');
+clearButton.innerHTML = 'Clear all completed task';
+clearButton.setAttribute('id', 'clearButton');
 
 // set an array of some simple to do tasks (array of objects)
 const listItems = [
@@ -69,4 +69,4 @@ const populateTasks = () => {
   }
 };
 populateTasks();
-tasksList.append(clearCompleted);
+tasksList.append(clearButton);

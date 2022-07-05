@@ -1,4 +1,5 @@
-/* GLOBAL STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 body {
   margin: 0 auto;
 }
@@ -61,14 +62,14 @@ body * {
   width: 91%;
 }
 
-#clearCompleted {
+#clearButton {
   border: 1px rgb(216, 216, 216) solid;
   border-top: 0;
   padding: 15px;
   color: rgb(138, 138, 138);
 }
 
-#clearCompleted:hover {
+#clearButton:hover {
   background-color: rgb(138, 138, 138);
   color: rgb(219, 219, 219);
 }
