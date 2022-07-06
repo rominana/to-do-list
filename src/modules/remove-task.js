@@ -5,7 +5,7 @@ const removeTask = (index) => {
   let toDoTasks = getData();
   toDoTasks = toDoTasks.filter((task) => task.index !== index);
   toDoTasks.forEach((task, index) => {
-    task.index = index + 1;
+    task.index = index - 1;
   });
   localStorage.setItem('toDoData', JSON.stringify(toDoTasks));
   li.remove();
