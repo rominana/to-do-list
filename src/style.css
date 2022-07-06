@@ -19,6 +19,7 @@ h1 {
   color: black;
   margin: 0 auto;
   padding-top: 20vh;
+  font-size: 35px;
 }
 
 button,
@@ -33,7 +34,6 @@ input {
   margin: 0 auto;
   padding: 3rem;
   background-color: whitesmoke;
-  border-radius: 1rem;
 }
 
 .task {
@@ -70,8 +70,7 @@ input {
 #alert {
   display: none;
   padding: 0.8rem;
-  border-radius: 0.4rem;
-  background-color: black;
+  background-color: #c30;
   color: whitesmoke;
 }
 
@@ -90,7 +89,6 @@ input {
   color: black;
   background-color: whitesmoke;
   padding: 0.8rem;
-  border-radius: 0.4rem;
   outline: 1px solid black;
 }
 
@@ -108,5 +106,4 @@ input {
   background-color: whitesmoke;
   padding: 0.7rem;
   border: 0.1rem solid black;
-  border-radius: 0.4rem;
 }
