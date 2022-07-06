@@ -1,4 +1,5 @@
 // Selectors
+// get data from local storage
 const getData = () => {
   const data = localStorage.getItem('toDoData');
   if (data) {

@@ -1,6 +1,7 @@
 import editTask from './edit-task.js';
 import removeTask from './remove-task.js';
 
+// Selectors
 const taskList = document.getElementById('task-list');
 
 const createLi = (task) => {
@@ -11,7 +12,7 @@ const createLi = (task) => {
   const removeButton = document.createElement('button');
   const textInput = document.createElement('input');
 
-  // Set List element id and class
+  // Set List element id and classes
   li.setAttribute('id', `task${task.index}`);
   li.classList.add('task');
 
@@ -35,15 +36,12 @@ const createLi = (task) => {
     div.classList.add('done');
   }
 
-  // Set options button class and content
-  button.classList.add('options');
-  button.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
-
+  // BUTTONS
   // Set remove button class and content
   removeButton.classList.add('remove');
   removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
-  // Append all elements to li in order
+  // Append all elements to li in html in order
   li.appendChild(checkbox);
   li.appendChild(div);
   li.appendChild(textInput);
@@ -52,6 +50,7 @@ const createLi = (task) => {
 
   taskList.appendChild(li);
 
+  // Event listeners
   checkbox.addEventListener('change', () => {
     div.classList.toggle('done');
   });

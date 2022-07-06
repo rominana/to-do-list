@@ -53,11 +53,6 @@ input {
   color: black;
 }
 
-.options {
-  justify-self: flex-end;
-  display: none;
-}
-
 .head {
   display: flex;
 }
@@ -69,6 +64,7 @@ input {
 .edit {
   display: none;
   flex: 1;
+  outline: 1px solid greenyellow;
 }
 
 #alert {
