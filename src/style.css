@@ -1,106 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+  background-color: whitesmoke;
 }
 
-body * {
+ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
-.hidden {
+h1 {
+  text-align: center;
+  color: black;
+  margin: 0 auto;
+  padding-top: 20vh;
+}
+
+button,
+input {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+.box {
+  width: 45%;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.task {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.text {
+  flex: 1;
+}
+
+.done {
+  text-decoration: line-through;
+  color: black;
+}
+
+.options {
+  justify-self: flex-end;
   display: none;
 }
 
-/* LIST ELEMENTS */
-
-#to-do-div div {
+.head {
   display: flex;
-  flex-direction: row;
-  border: 1px rgb(216, 216, 216) solid;
-  border-bottom: 0;
-  padding: 5px;
-  padding-left: 10px;
-  width: auto;
 }
 
-#to-do-div div:last-of-type input[type=text]::placeholder {
-  font-style: italic;
+.head h2 {
+  flex: 1;
 }
 
-#to-do-div div button {
-  padding: 15px;
-  border: 0;
-  margin-left: auto;
-  background-color: rgba(63, 99, 129, 0);
-  background-image: url(./images/refresh.png);
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
+.edit {
+  display: none;
+  flex: 1;
 }
 
-#to-do-list li button {
-  padding: 15px;
-  border: 0;
-  margin-left: auto;
-  background-color: rgba(63, 99, 129, 0);
-  background-image: url(./images/dots.png);
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: center;
+#alert {
+  display: none;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: whitesmoke;
 }
 
-#to-do-div div:last-of-type button {
-  background-image: url(./images/enter.png);
-}
-
-#to-do-div div input[type=text] {
-  border: 0;
-  outline: none;
-  width: 91%;
-}
-
-#clearButton {
-  border: 1px rgb(216, 216, 216) solid;
-  border-top: 0;
-  padding: 15px;
-  color: rgb(138, 138, 138);
-}
-
-#clearButton:hover {
-  background-color: rgb(138, 138, 138);
-  color: rgb(219, 219, 219);
-}
-
-#to-do-list {
+#container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 25px 25px;
+  gap: 1rem;
 }
 
-#to-do-list li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px rgb(216, 216, 216) solid;
-  border-top: 0;
+#clear {
+  width: 100%;
 }
 
-#to-do-list li:first-of-type {
-  border-top: 1px rgb(216, 216, 216) solid;
+#add-task,
+#clear {
+  color: black;
+  background-color: whitesmoke;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  outline: 1px solid black;
 }
 
-#to-do-list li input[type=checkbox] {
-  margin: 10px;
+#add-task:active,
+#clear:active {
+  color: whitesmoke;
+  background-color: gray;
+  padding: 0.7rem;
+  border: 0.1rem solid gray;
 }
 
-#to-do-list li input[type=text] {
-  width: 78.5%;
-  border: 0;
-  padding: 10px;
-  outline: none;
+#new-task {
+  flex: 1;
+  color: black;
+  background-color: whitesmoke;
+  padding: 0.7rem;
+  border: 0.1rem solid black;
+  border-radius: 0.4rem;
 }
