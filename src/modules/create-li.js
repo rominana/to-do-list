@@ -37,6 +37,10 @@ const createLi = (task) => {
   }
 
   // BUTTONS
+  // Set options button class and content
+  button.classList.add('options');
+  button.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
+
   // Set remove button class and content
   removeButton.classList.add('remove');
   removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
