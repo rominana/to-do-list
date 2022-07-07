@@ -5,7 +5,7 @@ import completed from './completed.js';
 const taskList = document.getElementById('task-list');
 
 const createLi = (task) => {
-  // selectors
+  // Set selectors
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
   const div = document.createElement('div');
@@ -40,7 +40,7 @@ const createLi = (task) => {
 
   // Set options button class and content
   button.classList.add('options');
-  button.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
+  button.innerHTML = '<i class="fa-solid fa-check"></i>';
 
   // Set remove button class and content
   removeButton.classList.add('remove');
@@ -78,7 +78,7 @@ const createLi = (task) => {
     changeToDiv();
   };
 
-  // addEventlisteners to elements
+  // add Eventlisteners to elements
   checkbox.addEventListener('change', toggleDiv);
   div.addEventListener('click', changeToInput);
   textInput.addEventListener('change', editDiv);
