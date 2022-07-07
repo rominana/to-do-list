@@ -1,14 +1,11 @@
 import getData from './get-data.js';
 
-const editTask = (liId, description = '', completed = false) => {
+const completed = (liId, completed = false) => {
   const toDoTasks = getData();
   const index = Number(liId.substring(4));
-  if (description) {
-    toDoTasks[index - 1].description = description;
-  }
   toDoTasks[index - 1].completed = completed;
   // set data on local storage
   localStorage.setItem('toDoData', JSON.stringify(toDoTasks));
 };
 
-export default editTask;
+export default completed;

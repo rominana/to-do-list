@@ -1,10 +1,11 @@
 import editTask from './edit-task.js';
 import removeTask from './remove-task.js';
+import completed from './completed.js';
 
-// Selectors
 const taskList = document.getElementById('task-list');
 
 const createLi = (task) => {
+  // Set selectors
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
   const div = document.createElement('div');
@@ -12,12 +13,13 @@ const createLi = (task) => {
   const removeButton = document.createElement('button');
   const textInput = document.createElement('input');
 
-  // Set List element id and classes
+  // Set List element id and class
   li.setAttribute('id', `task${task.index}`);
   li.classList.add('task');
 
   // Set checkbox attributes
   checkbox.checked = task.completed;
+  checkbox.classList.add('check');
   checkbox.setAttribute('type', 'checkbox');
   checkbox.setAttribute('name', `check${task.index}`);
   checkbox.setAttribute('id', `check${task.index}`);
@@ -36,16 +38,15 @@ const createLi = (task) => {
     div.classList.add('done');
   }
 
-  // BUTTONS
   // Set options button class and content
   button.classList.add('options');
-  button.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
+  button.innerHTML = '<i class="fa-solid fa-check"></i>';
 
   // Set remove button class and content
   removeButton.classList.add('remove');
   removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
-  // Append all elements to li in html in order
+  // Append all elements to li in order
   li.appendChild(checkbox);
   li.appendChild(div);
   li.appendChild(textInput);
@@ -54,30 +55,37 @@ const createLi = (task) => {
 
   taskList.appendChild(li);
 
-  // Event listeners
-  checkbox.addEventListener('change', () => {
-    div.classList.toggle('done');
-  });
+  // create functions for specific behaviors
 
-  div.addEventListener('click', () => {
+  const toggleDiv = () => {
+    div.classList.toggle('done');
+    completed(li.id, checkbox.checked);
+  };
+
+  const changeToInput = () => {
     div.style.display = 'none';
     textInput.style.display = 'inherit';
-  });
+  };
 
-  textInput.addEventListener('change', () => {
+  const changeToDiv = () => {
+    div.style.display = 'inherit';
+    textInput.style.display = 'none';
+  };
+
+  const editDiv = () => {
     div.innerHTML = textInput.value;
-    editTask(task.index, textInput.value, checkbox.checked);
-    div.style.display = 'inherit';
-    textInput.style.display = 'none';
-  });
+    editTask(li.id, textInput.value, checkbox.checked);
+    changeToDiv();
+  };
 
-  textInput.addEventListener('focusout', () => {
-    div.style.display = 'inherit';
-    textInput.style.display = 'none';
-  });
-
+  // add Eventlisteners to elements
+  // add event listener to the checkbox , change
+  checkbox.addEventListener('change', toggleDiv);
+  div.addEventListener('click', changeToInput);
+  textInput.addEventListener('change', editDiv);
+  textInput.addEventListener('focusout', changeToDiv);
   removeButton.addEventListener('click', () => {
-    removeTask(task.index);
+    removeTask(removeButton);
   });
 };
 
