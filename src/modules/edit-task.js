@@ -7,6 +7,7 @@ const editTask = (liId, description = '', completed = false) => {
     toDoTasks[index - 1].description = description;
   }
   toDoTasks[index - 1].completed = completed;
+  // set data on local storage
   localStorage.setItem('toDoData', JSON.stringify(toDoTasks));
 };
 

@@ -79,6 +79,7 @@ const createLi = (task) => {
   };
 
   // add Eventlisteners to elements
+  // add event listener to the checkbox , change
   checkbox.addEventListener('change', toggleDiv);
   div.addEventListener('click', changeToInput);
   textInput.addEventListener('change', editDiv);
