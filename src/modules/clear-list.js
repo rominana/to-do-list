@@ -1,6 +1,6 @@
 import removeTask from './remove-task.js';
 
-const clearCompleted = () => {
+const clearList = () => {
   const clearButton = document.getElementById('clear');
   clearButton.addEventListener('click', () => {
     const tasks = document.querySelectorAll('.task');
@@ -15,4 +15,4 @@ const clearCompleted = () => {
   });
 };
 
-export default clearCompleted;
+export default clearList;

@@ -5,6 +5,7 @@ import completed from './completed.js';
 const taskList = document.getElementById('task-list');
 
 const createLi = (task) => {
+  // selectors
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
   const div = document.createElement('div');
