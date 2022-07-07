@@ -1,9 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do List Project - Add and Remove sections
+# To Do List Project - Interactive List 
 
- This project contains a simple HTML list of To Do tasks using Webpack and Javascript with an add and remove element function. 
- Project 2 of 3. 
+ This project contains a simple HTML list of To Do tasks using Webpack and Javascript with an interactive list function. 
 
 ### Built With
 - HTML
