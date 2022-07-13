@@ -2,9 +2,8 @@ import editTask from './edit-task.js';
 import removeTask from './remove-task.js';
 import completed from './completed.js';
 
-const taskList = document.getElementById('task-list');
-
 const createLi = (task) => {
+  const taskList = document.getElementById('task-list');
   // Set selectors
   const li = document.createElement('li');
   const checkbox = document.createElement('input');
