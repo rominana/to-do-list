@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-/* eslint-disable no-useless-concat */
-
 import createLi from '../create-li.js';
 
 describe('Create LI function', () => {
@@ -13,7 +11,7 @@ describe('Create LI function', () => {
       completed: false,
       index: 1,
     };
-    document.body.innerHTML = '<div>' + '  <ul id="task-list"></ul>' + '</div>';
+    document.body.innerHTML = '<div> <ul id="task-list"></ul> </div>';
     createLi(task);
     const list = document.querySelectorAll('#task-list li');
     expect(list).toHaveLength(1);
