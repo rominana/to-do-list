@@ -1,0 +1,8 @@
+// Install babel to resolve ES6 imports in Jest
+{
+    "env": {
+    "test": {
+        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+    }
+}
