@@ -245,51 +245,51 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import editTask from "./edit-task.js";
-import removeTask from "./remove-task.js";
-import completed from "./completed.js";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import editTask from './edit-task.js';
+import removeTask from './remove-task.js';
+import completed from './completed.js';
 &nbsp;
 const createLi = (task) =&gt; {
-  const taskList = document.getElementById("task-list");
+  const taskList = document.getElementById('task-list');
   // Set selectors
-  const li = document.createElement("li");
-  const checkbox = document.createElement("input");
-  const div = document.createElement("div");
-  const button = document.createElement("button");
-  const removeButton = document.createElement("button");
-  const textInput = document.createElement("input");
+  const li = document.createElement('li');
+  const checkbox = document.createElement('input');
+  const div = document.createElement('div');
+  const button = document.createElement('button');
+  const removeButton = document.createElement('button');
+  const textInput = document.createElement('input');
 &nbsp;
   // Set List element id and class
-  li.setAttribute("id", `task${task.index}`);
-  li.classList.add("task");
+  li.setAttribute('id', `task${task.index}`);
+  li.classList.add('task');
 &nbsp;
   // Set checkbox attributes
   checkbox.checked = task.completed;
-  checkbox.classList.add("check");
-  checkbox.setAttribute("type", "checkbox");
-  checkbox.setAttribute("name", `check${task.index}`);
-  checkbox.setAttribute("id", `check${task.index}`);
+  checkbox.classList.add('check');
+  checkbox.setAttribute('type', 'checkbox');
+  checkbox.setAttribute('name', `check${task.index}`);
+  checkbox.setAttribute('id', `check${task.index}`);
 &nbsp;
   // Set text input attributes
-  textInput.classList.add("edit");
-  textInput.setAttribute("type", "text");
-  textInput.setAttribute("name", `text${task.index}`);
-  textInput.setAttribute("id", `text${task.index}`);
+  textInput.classList.add('edit');
+  textInput.setAttribute('type', 'text');
+  textInput.setAttribute('name', `text${task.index}`);
+  textInput.setAttribute('id', `text${task.index}`);
   textInput.value = task.description;
 &nbsp;
   // Set div classes and content
-  div.classList.add("text");
+  div.classList.add('text');
   div.innerHTML = task.description;
   <span class="missing-if-branch" title="if path not taken" >I</span>if (checkbox.checked) {
-<span class="cstat-no" title="statement not covered" >    div.classList.add("done");</span>
+<span class="cstat-no" title="statement not covered" >    div.classList.add('done');</span>
   }
 &nbsp;
   // Set options button class and content
-  button.classList.add("options");
+  button.classList.add('options');
   button.innerHTML = '&lt;i class="fa-solid fa-check"&gt;&lt;/i&gt;';
 &nbsp;
   // Set remove button class and content
-  removeButton.classList.add("remove");
+  removeButton.classList.add('remove');
   removeButton.innerHTML = '&lt;i class="fa-solid fa-trash-can"&gt;&lt;/i&gt;';
 &nbsp;
   // Append all elements to li in order
@@ -304,18 +304,18 @@ const createLi = (task) =&gt; {
   // create functions for specific behaviors
 &nbsp;
   const toggleDiv = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    div.classList.toggle("done");</span>
+<span class="cstat-no" title="statement not covered" >    div.classList.toggle('done');</span>
 <span class="cstat-no" title="statement not covered" >    completed(li.id, checkbox.checked);</span>
   };
 &nbsp;
   const changeToInput = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    div.style.display = "none";</span>
-<span class="cstat-no" title="statement not covered" >    textInput.style.display = "inherit";</span>
+<span class="cstat-no" title="statement not covered" >    div.style.display = 'none';</span>
+<span class="cstat-no" title="statement not covered" >    textInput.style.display = 'inherit';</span>
   };
 &nbsp;
   const changeToDiv = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    div.style.display = "inherit";</span>
-<span class="cstat-no" title="statement not covered" >    textInput.style.display = "none";</span>
+<span class="cstat-no" title="statement not covered" >    div.style.display = 'inherit';</span>
+<span class="cstat-no" title="statement not covered" >    textInput.style.display = 'none';</span>
   };
 &nbsp;
   const editDiv = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
@@ -326,11 +326,11 @@ const createLi = (task) =&gt; {
 &nbsp;
   // add Eventlisteners to elements
   // add event listener to the checkbox , change
-  checkbox.addEventListener("change", toggleDiv);
-  div.addEventListener("click", changeToInput);
-  textInput.addEventListener("change", editDiv);
-  textInput.addEventListener("focusout", changeToDiv);
-  removeButton.addEventListener("click", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+  checkbox.addEventListener('change', toggleDiv);
+  div.addEventListener('click', changeToInput);
+  textInput.addEventListener('change', editDiv);
+  textInput.addEventListener('focusout', changeToDiv);
+  removeButton.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    removeTask(removeButton);</span>
   });
 };
@@ -343,7 +343,7 @@ export default createLi;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jul 13 2022 13:01:24 GMT-0600 (Central Standard Time)
+                at Wed Jul 13 2022 15:50:19 GMT-0400 (Paraguay Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

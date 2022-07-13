@@ -1,5 +1,5 @@
 TN:
-SF:src\modules\add-task.js
+SF:src/modules/add-task.js
 FN:7,(anonymous_0)
 FN:20,(anonymous_1)
 FNF:2
@@ -28,7 +28,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src\modules\completed.js
+SF:src/modules/completed.js
 FN:3,(anonymous_0)
 FNF:1
 FNH:0
@@ -45,7 +45,7 @@ BRF:1
 BRH:0
 end_of_record
 TN:
-SF:src\modules\create-li.js
+SF:src/modules/create-li.js
 FN:5,(anonymous_0)
 FN:59,(anonymous_1)
 FN:64,(anonymous_2)
@@ -121,7 +121,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:src\modules\edit-task.js
+SF:src/modules/edit-task.js
 FN:3,(anonymous_0)
 FNF:1
 FNH:0
@@ -143,7 +143,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:src\modules\get-data.js
+SF:src/modules/get-data.js
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -161,7 +161,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:src\modules\remove-task.js
+SF:src/modules/remove-task.js
 FN:3,(anonymous_0)
 FNF:1
 FNH:1
@@ -175,7 +175,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src\modules\task.js
+SF:src/modules/task.js
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
@@ -190,7 +190,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src\modules\update-index.js
+SF:src/modules/update-index.js
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FNF:2

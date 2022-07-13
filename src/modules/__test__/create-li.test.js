@@ -1,18 +1,21 @@
 /**
  * @jest-environment jsdom
  */
-import createLi from "../create-li.js";
 
-describe("Create LI function", () => {
-  test("Should add a li element to the DOM", () => {
+/* eslint-disable no-useless-concat */
+
+import createLi from '../create-li.js';
+
+describe('Create LI function', () => {
+  test('Should add a li element to the DOM', () => {
     const task = {
-      description: "clean my room",
+      description: 'clean my room',
       completed: false,
       index: 1,
     };
-    document.body.innerHTML = "<div>" + '  <ul id="task-list"></ul>' + "</div>";
+    document.body.innerHTML = '<div>' + '  <ul id="task-list"></ul>' + '</div>';
     createLi(task);
-    const list = document.querySelectorAll("#task-list li");
+    const list = document.querySelectorAll('#task-list li');
     expect(list).toHaveLength(1);
   });
 });
