@@ -1,13 +1,13 @@
-import removeTask from "./remove-task.js";
+import removeTask from './remove-task.js';
 
 const clearListAction = () => {
-  const tasks = document.querySelectorAll(".task");
+  const tasks = document.querySelectorAll('.task');
   const tasksToBeRemoved = [...tasks].filter((task) => {
-    const checkbox = task.querySelector(".check");
+    const checkbox = task.querySelector('.check');
     return checkbox.checked;
   });
   tasksToBeRemoved.forEach((task) => {
-    const removeButton = task.querySelector(".remove");
+    const removeButton = task.querySelector('.remove');
     removeTask(removeButton);
   });
 };

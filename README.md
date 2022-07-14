@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do List Project - Interactive List 
+# To Do List Project - Testt
 
- This project contains a simple HTML list of To Do tasks using Webpack and Javascript with an interactive list function. 
-
+In this project we applied test to multiple functions using Jest.
 ### Built With
 - HTML
 - CSS
 - Javascript ES6
 - Webpack
+- Jest
 
 ## Prerequisites
 - Modern web browser with Javascript enabled
@@ -21,6 +21,9 @@ git clone git@github.com:rominana/to-do-list.git
 - Twitter: @romina_pati
 - Linkedin: romina-patino
 
+- GitHub: @diegoyon
+- Twitter: @diegoyon
+- Linkedin: @diego_yon
 ## Acknowledgments
 @microverse
 

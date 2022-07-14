@@ -1,8 +1,8 @@
-import clearListAction from "./clear-list-action.js";
+import clearListAction from './clear-list-action.js';
 
 const clearList = () => {
-  const clearButton = document.getElementById("clear");
-  clearButton.addEventListener("click", () => {
+  const clearButton = document.getElementById('clear');
+  clearButton.addEventListener('click', () => {
     clearListAction();
   });
 };
