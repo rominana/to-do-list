@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,29 +92,29 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Task from './task.js';
@@ -122,24 +122,24 @@
 const updateIndex = () =&gt; {
   const allLis = document.querySelectorAll('.task');
   const newToDoList = [];
-  allLis.forEach(<span class="fstat-no" title="function not covered" >(l</span>i, index) =&gt; {
+  allLis.forEach((li, index) =&gt; {
     // Change the li id
-    const newIndex = <span class="cstat-no" title="statement not covered" >index + 1;</span>
-<span class="cstat-no" title="statement not covered" >    li.setAttribute('id', `task${newIndex}`);</span>
+    const newIndex = index + 1;
+    li.setAttribute('id', `task${newIndex}`);
 &nbsp;
     // Obtain the elements of the current li
-    const checkbox = <span class="cstat-no" title="statement not covered" >li.querySelector('.check');</span>
-    const div = <span class="cstat-no" title="statement not covered" >li.querySelector('.text');</span>
-    const textInput = <span class="cstat-no" title="statement not covered" >li.querySelector('.edit');</span>
+    const checkbox = li.querySelector('.check');
+    const div = li.querySelector('.text');
+    const textInput = li.querySelector('.edit');
 &nbsp;
     // Change the unique attributes of the elements
-<span class="cstat-no" title="statement not covered" >    checkbox.setAttribute('name', `check${newIndex}`);</span>
-<span class="cstat-no" title="statement not covered" >    checkbox.setAttribute('id', `check${newIndex}`);</span>
+    checkbox.setAttribute('name', `check${newIndex}`);
+    checkbox.setAttribute('id', `check${newIndex}`);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    textInput.setAttribute('name', `text${newIndex}`);</span>
-<span class="cstat-no" title="statement not covered" >    textInput.setAttribute('id', `text${newIndex}`);</span>
+    textInput.setAttribute('name', `text${newIndex}`);
+    textInput.setAttribute('id', `text${newIndex}`);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    newToDoList.push(new Task(div.innerHTML, newIndex, checkbox.checked));</span>
+    newToDoList.push(new Task(div.innerHTML, newIndex, checkbox.checked));
   });
   localStorage.setItem('toDoData', JSON.stringify(newToDoList));
 };
@@ -151,7 +151,7 @@ export default updateIndex;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jul 13 2022 17:56:34 GMT-0400 (Paraguay Standard Time)
+                at Thu Jul 14 2022 12:58:55 GMT-0400 (Paraguay Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>
