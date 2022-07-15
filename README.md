@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do List Project - Testt
+# To Do List Project - Testing
 
 In this project we applied test to multiple functions using Jest.
 ### Built With
